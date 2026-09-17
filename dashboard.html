@@ -10,33 +10,61 @@
 </head>
 <body>
   <div class="dashboard-container">
-    <header>
-      <span>Gestor de turnos</span>
-      <div>
-        <button class="menu">&#9776;</button>
-        <button id="logout">Cerrar Sesión</button>
-      </div>
-    </header>
     <nav id="sidebar">
+    <div class="sidebarHead">
+      <ul>
+        <h4>Admin Portal</h4>
+        <a>Healthcare Managament</a>
+      </ul>
       <ul>
         <li><a href="#">Panel</a></li>
       </ul>
+      <ul>
+        <li><a href="#">Doctores</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Especialidades</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Busqueda de Pacientes</a></li>
+      </ul>
+    </div>
+        <footer class="footerTurnos">
+          <span>Gestor de turnos</span>
+        <div>
+          <button id="logout">Cerrar Sesión</button>
+        </div>
+        </footer>
     </nav>
     <main>
-      <h1>Pacientes</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Paciente</th>
-          </tr>
-        </thead>
-        <tbody id="product-table-body">
-          <!-- Los productos se cargarán aquí dinámicamente -->
-        </tbody>
-      </table>
+      <button id="expand" class="menu">&#9776;</button>
+      <div>
+        <h1>Vista General de Gestion</h1>
+        <a>Configure el personal medico y las especialidades del departamento.</a>
+        <div class="containerButtons">
+          <button class="btn1">botn 1</button>
+          <button class="btn2">botn 2</button>
+        </div>
+      </div>
+      <div class="containerCards">
+        <div>carta1</div>
+        <div>carta2</div>
+        <div>carta3</div>
+      </div>
+      <div class="tabla"> 
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Paciente</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+          </tbody>
+        </table>
+      </div>
     </main>
-    <footer>Mi Aplicación &copy; 2024</footer>
   </div>
 </body>
 </html>
