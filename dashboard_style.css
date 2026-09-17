@@ -1,3 +1,8 @@
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
 .dashboard-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -190,7 +195,7 @@
 }
 
 .tabla .estado {
-    color: #03f84d;
+    color: #213321;
     background-color: #81db97;
     border-radius: 6px;
     width: 70px;

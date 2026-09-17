@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listado de Productos</title>
   <link rel="stylesheet" href="dashboard_style.css">
-  <script src="dashboard.js"></script>
+  <script src="specialities.js"></script>
 </head>
 <body>
   <div class="dashboard-container">
@@ -16,9 +16,9 @@
         <a>Healthcare Managament</a>
       </ul>
       <ul>
-        <li class="active"><a href="#">Panel</a></li>
+        <li ><a href="dashboard.html">Panel</a></li>
         <li><a href="#">Doctores</a></li>
-        <li><a href="specialities.html">Especialidades</a></li>
+        <li class="active" ><a href="#">Especialidades</a></li>
         <li><a href="#">Busqueda de Pacientes</a></li>
       </ul>
     </div>
@@ -38,16 +38,6 @@
       <div>
         <h1>Vista General de Gestion</h1>
         <a>Configure el personal medico y las especialidades del departamento.</a>
-        <div class="containerButtons">
-          <button class="btn1">botn 1</button>
-          <button class="btn2">botn 2</button>
-        </div>
-      </div>
-      <div class="containerCards">
-        <div>carta1</div>
-        <div>carta2</div>
-        <div>carta3</div>
-      </div>
       <div class="containerTable"> 
         <div class="tableHeader">
           <a><b>Directorio de Profecionales Medicos</b></a>
@@ -56,19 +46,15 @@
         <table class="tabla">
           <thead class="tablaHead">
             <tr>
-              <th>Nombre del Doctor</th>
-              <th>Especialidad</th>
-              <th>Estado de Disponibilidad</th>
+              <th>Nombre de la Especialidad</th>
+              <th>Descripcion</th>
+              <th>Estado</th>
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody id="product-table-body">
-            <tr>
-              <td><div class="doctornombre"><img class="img" src="Source/Doctor1.png" alt="Doctor"><b>Maria</b></div></td>
-              <td class="especialidad">Cardiologa</td>
-              <td><div class="estado">&#9679Activo</div></td>
-              <td></td>
-            </tr>
+          <tbody id="table-specialities">
+
+
           </tbody>
         </table>
         <footer class="tableFooter">
