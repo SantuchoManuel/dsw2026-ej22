@@ -17,26 +17,24 @@
         <a>Healthcare Managament</a>
       </ul>
       <ul>
-        <li><a href="#">Panel</a></li>
-      </ul>
-      <ul>
+        <li class="active"><a href="#">Panel</a></li>
         <li><a href="#">Doctores</a></li>
-      </ul>
-      <ul>
         <li><a href="#">Especialidades</a></li>
-      </ul>
-      <ul>
         <li><a href="#">Busqueda de Pacientes</a></li>
       </ul>
     </div>
         <footer class="footerTurnos">
-          <span>Gestor de turnos</span>
-        <div>
-          <button id="logout">Cerrar Sesión</button>
+          <ul>
+          <li><button class="botonc" id="settings">Configuracion</button></li>
+          <li><button class="botonsc" id="logout">Cerrar Sesión</button></li>
+          </ul>
+        <div class="footerInfo">
+          <img class="img" src="Source/Doctor1.png" alt="Doctor">
+          <span>Administradora Jefe</span>
         </div>
         </footer>
     </nav>
-    <main>
+    <main class="main">
       <button id="expand" class="menu">&#9776;</button>
       <div>
         <h1>Vista General de Gestion</h1>
@@ -51,18 +49,38 @@
         <div>carta2</div>
         <div>carta3</div>
       </div>
-      <div class="tabla"> 
-        <table>
-          <thead>
+      <div class="containerTable"> 
+        <div class="tableHeader">
+          <a><b>Directorio de Profecionales Medicos</b></a>
+          <input class="inputbusqueda" type="text" id="search-input" placeholder="Buscar por nombre">
+        </div>
+        <table class="tabla">
+          <thead class="tablaHead">
             <tr>
-              <th>ID</th>
-              <th>Paciente</th>
+              <th>Nombre del Doctor</th>
+              <th>Especialidad</th>
+              <th>Estado de Disponibilidad</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody id="product-table-body">
-            <!-- Los productos se cargarán aquí dinámicamente -->
+            <tr>
+              <td><div class="doctornombre"><img class="img" src="Source/Doctor1.png" alt="Doctor"><b>Maria</b></div></td>
+              <td class="especialidad">Cardiologa</td>
+              <td><div class="estado">&#9679Activo</div></td>
+              <td></td>
+            </tr>
           </tbody>
         </table>
+        <footer class="tableFooter">
+          <div>
+            <span id="page-info">Mostrando 1 a 1 de 1 resultados</span>
+          </div>
+          <div>
+            <button id="prev-page">Anterior</button>
+            <button id="next-page">Siguiente</button>
+          </div>
+        </footer>
       </div>
     </main>
   </div>
