@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listado de Productos</title>
-  <link rel="stylesheet" href="dashboard_style.css">
+  <link rel="stylesheet" href="specialities_style.css">
   <script src="specialities.js"></script>
 </head>
+
 <body>
   <div class="dashboard-container">
     <nav id="sidebar">
@@ -33,16 +34,22 @@
         </div>
         </footer>
     </nav>
+
     <main class="main">
       <button id="expand" class="menu">&#9776;</button>
-      <div>
-        <h1>Vista General de Gestion</h1>
-        <a>Configure el personal medico y las especialidades del departamento.</a>
-      <div class="containerTable"> 
-        <div class="tableHeader">
-          <a><b>Directorio de Profecionales Medicos</b></a>
-          <input class="inputbusqueda" type="text" id="search-input" placeholder="Buscar por nombre">
+
+      <div class="headerSpecialities">
+        <div class="headerSpecialitiesText">
+          <h1>Directorio de Especialidades</h1>
+          <a>Administre las categorias medicas, servicios y disponibilidad del personal especializado</a>
         </div>
+        <form class="tableSearch">
+          <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Ingresar Especialidad...">
+          <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
+        </form>
+      </div>
+
+      <div class="containerTable"> 
         <table class="tabla">
           <thead class="tablaHead">
             <tr>
@@ -53,10 +60,9 @@
             </tr>
           </thead>
           <tbody id="table-specialities">
-
-
           </tbody>
         </table>
+
         <footer class="tableFooter">
           <div>
             <span id="page-info">Mostrando 1 a 1 de 1 resultados</span>
