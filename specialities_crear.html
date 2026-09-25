@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Productos</title>
+  <link rel="stylesheet" href="specialities_crear_style.css">
+  <script src="specialities_crear.js"></script>
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <nav id="sidebar">
+    <div class="sidebarHead">
+      <ul>
+        <h4>Admin Portal</h4>
+        <a>Healthcare Managament</a>
+      </ul>
+      <ul>
+        <li ><a href="dashboard.html">Panel</a></li>
+        <li><a href="#">Doctores</a></li>
+        <li class="active" ><a href="#">Especialidades</a></li>
+        <li><a href="#">Busqueda de Pacientes</a></li>
+      </ul>
+    </div>
+        <footer class="footerTurnos">
+          <ul>
+          <li><button class="botonc" id="settings">Configuracion</button></li>
+          <li><button class="botonsc" id="logout">Cerrar Sesión</button></li>
+          </ul>
+        <div class="footerInfo">
+          <img class="img" src="Source/Doctor1.png" alt="Doctor">
+          <span>Administradora Jefe</span>
+        </div>
+        </footer>
+    </nav>
+
+    <main class="main">
+      <button id="expand" class="menu">&#9776;</button>
+
+      <div class="headerSpecialities">
+        <h5>Registrar Nueva Especialidad</h5>
+        <a>Complete la informacion tecnica y administrativa para dar de alta una especialidad medica en el sistema hospitalario</a>
+      </div>
+
+      <div class="containerTable"> 
+        <form class="specialityForm" id="specialityForm" action="#" method="POST">
+          <label for="name">Nombre de la Especialidad:</label>
+          <input type="text" id="name" name="name" placeholder="Ej. Cardiologia Intervencionista" required>
+
+          <label for="description">Descripcion:</label>
+          <input class="descriptioninput" type="text" id="description" name="description" placeholder="Detalle el alcance, procedimientos principales y requisitos de derivacion..." required>
+
+
+          <label for="status">Estado:</label>
+          <select id="status" name="status" required>
+            <option value="active">Activo</option>
+            <option value="inactive">Inactivo</option>
+          </select>
+
+          <footer>
+            <button class="btncancel" type="button" onclick="window.history.back()">Cancelar</button>
+            <button class="btnsave" type="submit">Guardar Especialidad</button>
+          </footer>
+          
+        </form>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
