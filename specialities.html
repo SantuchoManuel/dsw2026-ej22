@@ -43,13 +43,11 @@
           <h1>Directorio de Especialidades</h1>
           <a>Administre las categorias medicas, servicios y disponibilidad del personal especializado</a>
         </div>
-        <div style="display: flex; gap: 10px; align-items: center;">
-          <form class="tableSearch" style="margin: 0;">
-            <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Ingresar Especialidad...">
-            <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
-          </form>
-          <button class="btnBusqueda" onclick="window.location.href='specialities_crear.html'">+ Nueva Especialidad</button>
-        </div>
+        <form class="tableSearch">
+          <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Ingresar Especialidad...">
+          <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
+          <button class="btnBusqueda" type="button" onclick="window.location.href='specialities_crear.html'">+ Nueva Especialidad</button>
+        </form>
       </div>
 
       <div class="containerTable"> 
