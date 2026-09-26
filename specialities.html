@@ -19,7 +19,7 @@
       <ul>
         <li ><a href="dashboard.html">Panel</a></li>
         <li><a href="#">Doctores</a></li>
-        <li class="active" ><a href="#">Especialidades</a></li>
+        <li class="active" ><a href="specialities.html">Especialidades</a></li>
         <li><a href="#">Busqueda de Pacientes</a></li>
       </ul>
     </div>
@@ -43,10 +43,13 @@
           <h1>Directorio de Especialidades</h1>
           <a>Administre las categorias medicas, servicios y disponibilidad del personal especializado</a>
         </div>
-        <form class="tableSearch">
-          <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Ingresar Especialidad...">
-          <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
-        </form>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <form class="tableSearch" style="margin: 0;">
+            <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Ingresar Especialidad...">
+            <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
+          </form>
+          <button class="btnBusqueda" onclick="window.location.href='specialities_crear.html'">+ Nueva Especialidad</button>
+        </div>
       </div>
 
       <div class="containerTable"> 
