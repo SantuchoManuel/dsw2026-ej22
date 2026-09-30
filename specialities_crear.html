@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listado de Productos</title>
   <link rel="stylesheet" href="specialities_crear_style.css">
-  <script src="specialities_crear.js"></script>
+  <script src="storage.js"></script>
+  <script src="specialities_crear.js" defer></script>
 </head>
 
 <body>
@@ -46,10 +47,10 @@
       <div class="containerTable"> 
         <form class="specialityForm" id="specialityForm" action="#" method="POST">
           <label for="name">Nombre de la Especialidad:</label>
-          <input type="text" id="name" name="name" placeholder="Ej. Cardiologia Intervencionista" required>
+          <input type="text" id="name" name="name" maxlength="15" placeholder="Ej. Cardiologia Intervencionista" required>
 
           <label for="description">Descripcion:</label>
-          <input class="descriptioninput" type="text" id="description" name="description" placeholder="Detalle el alcance, procedimientos principales y requisitos de derivacion..." required>
+          <textarea class="descriptioninput" type="text" id="description" name="description" maxlength="100" rows="4" placeholder="Detalle el alcance, procedimientos principales y requisitos de derivacion..." required></textarea>
 
 
           <label for="status">Estado:</label>
@@ -59,10 +60,9 @@
           </select>
 
           <footer>
-            <button class="btncancel" type="button" onclick="window.history.back()">Cancelar</button>
+            <button class="btncancel" type="button" onclick="window.location.href='specialities.html'">Cancelar</button>
             <button class="btnsave" type="submit">Guardar Especialidad</button>
           </footer>
-          
         </form>
       </div>
 

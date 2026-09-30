@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listado de Productos</title>
   <link rel="stylesheet" href="specialities_style.css">
-  <script src="specialities.js"></script>
+  <script src="storage.js"></script>
+  <script src="specialities.js" defer></script>
 </head>
 
 <body>
@@ -44,9 +45,10 @@
           <a>Administre las categorias medicas, servicios y disponibilidad del personal especializado</a>
         </div>
         <form class="tableSearch">
-          <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Ingresar Especialidad...">
+          <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Buscar Especialidad...">
           <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
         </form>
+         <a href="specialities_crear.html">+ Nueva Especialidad</a>
       </div>
 
       <div class="containerTable"> 
