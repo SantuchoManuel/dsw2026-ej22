@@ -18,26 +18,26 @@ function initSpecialties() {
         const datosIniciales = [
             {
                 id: crypto.randomUUID(),
-                name: "Cardiología",
-                description: "Estudio y tratamiento de trastornos del corazón y del sistema circulatorio.",
+                name: "Cardiologia",
+                description: "Estudio y tratamiento de trastornos del corazon y del sistema circulatorio.",
                 status: "active"
             },
             {
                 id: crypto.randomUUID(),
-                name: "Neurología",
-                description: "Diagnóstico y tratamiento de todas las categorías de afecciones cerebrales.",
+                name: "Neurologia",
+                description: "Diagnostico y tratamiento de todas las categorías de afecciones cerebrales.",
                 status: "active"
             },
             {
                 id: crypto.randomUUID(),
-                name: "Dermatología",
-                description: "Atención integral de enfermedades de la piel, uñas y cabello.",
+                name: "Dermatologia",
+                description: "Atencion integral de enfermedades de la piel, uñas y cabello.",
                 status: "inactive"
             },
             {
                 id: crypto.randomUUID(),
-                name: "Pediatría",
-                description: "Cuidado médico de lactantes, niños y adolescentes.",
+                name: "Pediatria",
+                description: "Cuidado medico de lactantes, niños y adolescentes.",
                 status: "active"
             }
         ];

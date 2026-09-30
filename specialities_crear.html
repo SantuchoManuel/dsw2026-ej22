@@ -8,64 +8,72 @@
   <script src="storage.js"></script>
   <script src="specialities_crear.js" defer></script>
 </head>
-
 <body>
   <div class="dashboard-container">
     <nav id="sidebar">
-    <div class="sidebarHead">
-      <ul>
-        <h4>Admin Portal</h4>
-        <a>Healthcare Managament</a>
-      </ul>
-      <ul>
-        <li ><a href="dashboard.html">Panel</a></li>
-        <li><a href="#">Doctores</a></li>
-        <li class="active" ><a href="#">Especialidades</a></li>
-        <li><a href="#">Busqueda de Pacientes</a></li>
-      </ul>
-    </div>
-        <footer class="footerTurnos">
-          <ul>
-          <li><button class="botonc" id="settings">Configuracion</button></li>
-          <li><button class="botonsc" id="logout">Cerrar Sesión</button></li>
-          </ul>
-        <div class="footerInfo">
-          <img class="img" src="Source/Doctor1.png" alt="Doctor">
-          <span>Administradora Jefe</span>
+      <div class="sidebarHead">
+        <div class="brand">
+          <h4>Admin Portal</h4>
+          <span>Healthcare Management</span>
         </div>
-        </footer>
+        <ul class="nav-links">
+          <li><a href="dashboard.html"><span class="icon"></span>Panel</a></li>
+          <li><a href="#"><span class="icon"></span>Doctores</a></li>
+          <li class="active"><a href="specialities.html"><span class="icon"></span> Especialidades</a></li>
+          <li><a href="#"><span class="icon"></span> Busqueda de Pacientes</a></li>
+        </ul>
+      </div>
+      <footer class="footerTurnos">
+        <ul class="footer-links">
+          <li><button class="boton-12" id="settings">Configuracion</button></li>
+          <li><button class="boton-12" id="logout">Cerrar Sesion</button></li>
+        </ul>
+        <div class="footerInfo">
+          <img class="img" src="Source/Doctor1.png" alt="Admin">
+          <div> 
+            <strong>Cerrar Sesion</strong>
+            <small>Administradora Jefe</small>
+          </div>
+        </div>
+      </footer>
     </nav>
-
     <main class="main">
       <button id="expand" class="menu">&#9776;</button>
-
-      <div class="headerSpecialities">
-        <h5>Registrar Nueva Especialidad</h5>
-        <a>Complete la informacion tecnica y administrativa para dar de alta una especialidad medica en el sistema hospitalario</a>
+      <nav class="breadcrumb">
+        <a href="specialities.html">Especialidades</a>
+        <span class="separator">›</span>
+        <span class="current">Agregar Nueva Especialidad</span>
+      </nav>
+      <div class="header-section">
+        <h1>Registrar Nueva Especialidad</h1>
+        <p class="subtitle">Complete la información técnica y administrativa para dar de alta una especialidad médica en el sistema hospitalario.</p>
       </div>
-
-      <div class="containerTable"> 
-        <form class="specialityForm" id="specialityForm" action="#" method="POST">
-          <label for="name">Nombre de la Especialidad:</label>
-          <input type="text" id="name" name="name" maxlength="15" placeholder="Ej. Cardiologia Intervencionista" required>
-
-          <label for="description">Descripcion:</label>
-          <textarea class="descriptioninput" type="text" id="description" name="description" maxlength="100" rows="4" placeholder="Detalle el alcance, procedimientos principales y requisitos de derivacion..." required></textarea>
-
-
-          <label for="status">Estado:</label>
-          <select id="status" name="status" required>
-            <option value="active">Activo</option>
-            <option value="inactive">Inactivo</option>
-          </select>
-
-          <footer>
-            <button class="btncancel" type="button" onclick="window.location.href='specialities.html'">Cancelar</button>
-            <button class="btnsave" type="submit">Guardar Especialidad</button>
+      <div class="form-card">
+        <form id="specialityForm" novalidate>
+          <p id="errores" class="error-msg"></p>
+          <div class="form-group">
+            <label for="name">Nombre de la Especialidad</label>
+            <input type="text" id="name" name="name" maxlength="15" placeholder="Ej. Cardiología Intervencionista" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" maxlength="100" rows="5" placeholder="Detalle el alcance de la especialidad, procedimientos principales y requisitos de derivación..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="status">Estado inicial</label>
+            <div class="select-wrapper">
+              <select id="status" name="status" required>
+                <option value="active">Activo - Disponible para programación</option>
+                <option value="inactive">Inactivo</option>
+              </select>
+            </div>
+          </div>
+          <footer class="form-footer">
+            <button class="btn-cancel" type="button" onclick="window.location.href='specialities.html'">Cancelar</button>
+            <button class="btn-save" type="submit">Guardar Especialidad</button>
           </footer>
         </form>
       </div>
-
     </main>
   </div>
 </body>

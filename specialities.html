@@ -8,49 +8,50 @@
   <script src="storage.js"></script>
   <script src="specialities.js" defer></script>
 </head>
-
 <body>
   <div class="dashboard-container">
     <nav id="sidebar">
-    <div class="sidebarHead">
-      <ul>
-        <h4>Admin Portal</h4>
-        <a>Healthcare Managament</a>
-      </ul>
-      <ul>
-        <li ><a href="dashboard.html">Panel</a></li>
-        <li><a href="#">Doctores</a></li>
-        <li class="active" ><a href="#">Especialidades</a></li>
-        <li><a href="#">Busqueda de Pacientes</a></li>
-      </ul>
-    </div>
-        <footer class="footerTurnos">
-          <ul>
-          <li><button class="botonc" id="settings">Configuracion</button></li>
-          <li><button class="botonsc" id="logout">Cerrar Sesión</button></li>
-          </ul>
-        <div class="footerInfo">
-          <img class="img" src="Source/Doctor1.png" alt="Doctor">
-          <span>Administradora Jefe</span>
+      <div class="sidebarHead">
+        <div class="brand">
+          <h4>Admin Portal</h4>
+          <span>Healthcare Management</span>
         </div>
-        </footer>
+        <ul class="nav-links">
+          <li><a href="dashboard.html"><span class="icon"></span>Panel</a></li>
+          <li><a href="#"><span class="icon"></span>Doctores</a></li>
+          <li class="active"><a href="specialities.html"><span class="icon"></span> Especialidades</a></li>
+          <li><a href="#"><span class="icon"></span> Busqueda de Pacientes</a></li>
+        </ul>
+      </div>
+      <footer class="footerTurnos">
+        <ul class="footer-links">
+          <li><button class="boton-12" id="settings">Configuracion</button></li>
+          <li><button class="boton-12" id="logout">Cerrar Sesion</button></li>
+        </ul>
+        <div class="footerInfo">
+          <img class="img" src="Source/Doctor1.png" alt="Admin">
+          <div> 
+            <strong>Cerrar Sesion</strong>
+            <small>Administradora Jefe</small>
+          </div>
+        </div>
+      </footer>
     </nav>
-
     <main class="main">
       <button id="expand" class="menu">&#9776;</button>
-
       <div class="headerSpecialities">
-        <div class="headerSpecialitiesText">
+        <div class="headerText">
           <h1>Directorio de Especialidades</h1>
-          <a>Administre las categorias medicas, servicios y disponibilidad del personal especializado</a>
+          <p class="subtitle">Administre las categorias medicas, servicios y disponibilidad del personal especializado.</p>
         </div>
-        <form class="tableSearch">
-          <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Buscar Especialidad...">
-          <button class="btnBusqueda" type="submit">Buscar Especialidad</button>
-        </form>
-         <a href="specialities_crear.html">+ Nueva Especialidad</a>
+        <div class="headerActions">
+          <form class="tableSearch" id="form-busqueda">
+            <span class="search-icon"></span>
+            <input class="inputBusqueda" type="text" id="name" name="name" placeholder="Buscar especialidad...">
+          </form>
+          <a class="btn-nueva" href="specialities_crear.html">+ Nueva Especialidad</a>
+        </div>
       </div>
-
       <div class="containerTable"> 
         <table class="tabla">
           <thead class="tablaHead">
@@ -58,22 +59,45 @@
               <th>Nombre de la Especialidad</th>
               <th>Descripcion</th>
               <th>Estado</th>
-              <th>Acciones</th>
+              <th style="text-align: right; padding-right: 25px;">Acciones</th>
             </tr>
           </thead>
           <tbody id="table-specialities">
           </tbody>
         </table>
-
         <footer class="tableFooter">
-          <div>
-            <span id="page-info">Mostrando 1 a 1 de 1 resultados</span>
-          </div>
-          <div>
-            <button id="prev-page">Anterior</button>
-            <button id="next-page">Siguiente</button>
+          <span id="page-info">Mostrando 1 a 4 de 4 resultados</span>
+          <div class="paginatioin-buttons">
+            <button id="prev-page">&lt;</button>
+            <button id="next-page">&gt;</button>
           </div>
         </footer>
+      </div>
+      <div class="containerCards">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon1"></div>
+            <span class="tag green">↑ +2 este trimestre</span>
+          </div>
+          <span class="title">TOTAL ESPECIALIDADES</span>
+          <h2 class="value">24</h2>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon2"></div>
+            <span class="tag gray">15% incremento en citas</span>
+          </div>
+          <span class="title">MAS DEMANDADA</span>
+          <h2 class="value" style="font-size: 22px;">Cardiologia</h2>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon3"></div>
+            <span class="tag blue">Psicologia, Nutricion...</span>
+          </div>
+          <span class="title">NUEVAS ESTE MES</span>
+          <h2 class="value">03</h2>
+        </div>
       </div>
     </main>
   </div>

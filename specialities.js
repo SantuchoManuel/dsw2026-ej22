@@ -33,6 +33,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderTable(specialities);
 
+    const expandButton = document.getElementById('expand');
+    const sidebar = document.getElementById('sidebar');
+    const logoutButton = document.getElementById('logout');
+
+    if (expandButton && sidebar) {
+        expandButton.addEventListener('click', function () {
+            if (window.innerWidth < 600) {
+                sidebar.classList.toggle('expanded');
+            }
+        });
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+    }
+
     form.addEventListener('submit', function (event) {
         event.preventDefault(); 
 
