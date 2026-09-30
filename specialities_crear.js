@@ -1,65 +1,37 @@
-let specialities = []
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('specialityForm');
+    const errores = document.getElementById('errores');
 
-fetch('specialties.json')
-.then(Response => Response.json())
-.then(Data => {
-    specialities = Data
-    const tbody = document.getElementById('table-specialities');
-    Data.forEach( speciality => {
-        const tr = document.createElement ('tr');
-        const td1 = document.createElement ('td');
-        const td2 = document.createElement ('td');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Evita recargar la pagina
 
-        td1.innerText = speciality.name
-        td2.innerText = speciality.description
-        
-        tr.appendChild(td1)
-        tr.appendChild(td2)
-        tbody.appendChild(tr)
-    });
-})
-.catch(error => console.error(error))
+        const name = document.getElementById('name').value.trim();
+        const description = document.getElementById('description').value.trim();
+        const status = document.getElementById('status').value;
 
-/*Modificaion para ordenar el boton de busqueda en tabla*/
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const name = document.getElementById('name').value;
+        let mensajes = [];
 
-       /* La tabla se filtra a nivel de JS, no debe cargar nuevamente el archivo json.*/
-        const filteredSpecialities = specialities.filter(speciality => {
-            return speciality.name
-            .toLowerCase()
-            .includes(name.toLowerCase());
-        });
+        if (!name) {
+            mensajes.push("El Nombre es obligatorio.");
+        } else if (name.length > 15) {
+            mensajes.push("El Nombre no debe superar los 15 caracteres.");
+        }
 
-        const tbody = document.getElementById('table-specialities');
-        tbody.innerHTML = '';
+        if (!description) {
+            mensajes.push("La Descripción es obligatoria.");
+        } else if (description.length > 100) {
+            mensajes.push("La Descripción no debe superar los 100 caracteres.");
+        }
 
-        filteredSpecialities.forEach(speciality => {
-            const tr = document.createElement('tr');
-            const td1 = document.createElement('td');
-            const td2 = document.createElement('td');
-            td1.innerText = speciality.name;
-            td2.innerText = speciality.description;
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tbody.appendChild(tr);
-        });
+        if (mensajes.length > 0) {
+            errores.innerText = mensajes.join(" | ");
+        } else {
+            errores.innerText = "";
+
+            const nuevoObjeto = addSpecialty(name, description, status);
+            console.log("Especialidad creada:", nuevoObjeto);
+            alert("Especialidad guardada con éxito.");
+            window.location.href = 'specialities.html';
+        }
     });
 });
-
-
-//
-      /* 
-        // Aquí puedes agregar la lógica para validar el usuario y la contraseña
-        if(name ===) {
-            // Redirigir a la página de productos o dashboard
-            window.location.href = 'dashboard.html';
-        } else {
-            alert('Usuario o contraseña incorrectos');
-        }
-            */
