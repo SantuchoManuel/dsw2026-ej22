@@ -1,9 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('specialityForm');
     const errores = document.getElementById('errores');
+    const expandButton = document.getElementById('expand');
+    const sidebar = document.getElementById('sidebar');
+    const logoutButton = document.getElementById('logout');
+
+    if (expandButton && sidebar) {
+        expandButton.addEventListener('click', function () {
+            if (window.innerWidth < 600) {
+                sidebar.classList.toggle('expanded');
+            }
+        });
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+    }
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita recargar la pagina
+        e.preventDefault(); 
 
         const name = document.getElementById('name').value.trim();
         const description = document.getElementById('description').value.trim();

@@ -9,58 +9,82 @@
 </head>
 <body>
   <div class="dashboard-container">
+
     <nav id="sidebar">
-    <div class="sidebarHead">
-      <ul>
-        <h4>Admin Portal</h4>
-        <a>Healthcare Managament</a>
-      </ul>
-      <ul>
-        <li class="active"><a href="#">Panel</a></li>
-        <li><a href="#">Doctores</a></li>
-        <li><a href="specialities.html">Especialidades</a></li>
-        <li><a href="#">Busqueda de Pacientes</a></li>
-      </ul>
-    </div>
-        <footer class="footerTurnos">
-          <ul>
-          <li><button class="botonc" id="settings">Configuracion</button></li>
-          <li><button class="botonsc" id="logout">Cerrar Sesión</button></li>
-          </ul>
-        <div class="footerInfo">
-          <img class="img" src="Source/Doctor1.png" alt="Doctor">
-          <span>Administradora Jefe</span>
+      <div class="sidebarHead">
+        <div class="brand">
+          <h4>Admin Portal</h4>
+          <span>Healthcare Managament</span>
         </div>
+        <ul class="nav-links">
+          <li class="active"><a href="dashboard.html"><span class="icon"></span>Panel</a></li>
+          <li><a href="#"><span class="icon"></span>Doctores</a></li>
+          <li><a href="specialities.html"><span class="icon"></span> Especialidades</a></li>
+          <li><a href="#"><span class="icon"></span> Busqueda de Pacientes</a></li>
+        </ul>
+      </div>
+        <footer class="footerTurnos">
+          <ul class="footer-links">
+          <li><button class="boton-12" id="settings">Configuracion</button></li>
+          <li><button class="boton-12" id="logout">Cerrar Sesion</button></li>
+          </ul>
+          <div class="footerInfo">
+            <img class="img" src="Source/Doctor1.png" alt="Admin">
+            <div> 
+              <strong>Cerrar Sesion</strong>
+              <small>Administradora Jefe</small>
+            </div>
+          </div>
         </footer>
-    </nav>
+      </nav>
+    
     <main class="main">
       <button id="expand" class="menu">&#9776;</button>
-      <div>
+      <div class="header-section">
         <h1>Vista General de Gestion</h1>
-        <a>Configure el personal medico y las especialidades del departamento.</a>
+        <p class="subtitle">Configure el personal medico y las especialidades del departamento.</p>
         <div class="containerButtons">
           <button class="btn1">+ Agregar Nuevo Doctor</button>
-          <button class="btn2" onclick="window.location.href='specialities_crear.html'">+ Agregar Nueva Especialidad</button>
+          <button class="btn2" onclick="window.location.href='specialities_crear.html'"> <span style="font-size: 16px; margin-right: 5px;">+</span>Agregar Nueva Especialidad</button>
         </div>
       </div>
+
       <div class="containerCards">
-        <div>
-          <span>DOCTORES ACTIVOS</span>
-          <h2>124</h2>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon1"></div>
+            <span class="tag green">+4 este mes</span>
+          </div>
+          <span class="title">DOCOTRES ACTIVOS</span>
+          <h2 class="value">124</h2>
         </div>
-        <div>
-          <span>ESPECIALIDADES ACTIVAS</span>
-          <h2>32</h2>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon2"></div>
+            <span class="tag gray">Estable</span>
+          </div>
+          <span class="title">ESPECIALIDADES ACTIVAS</span>
+          <h2 class="value">32</h2>
         </div>
-        <div>
-          <span>TURNOS CONFIRMADOS HOY</span>
-          <h2>48</h2>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon3"></div>
+            <span class="tag blue">Hoy</span>
+          </div>
+          <span class="title">TURNOS CONFIRMADOS PARA HOY</span>
+          <h2 class="value">48</h2>
         </div>
       </div>
+
       <div class="containerTable"> 
         <div class="tableHeader">
-          <a><b>Directorio de Profecionales Medicos</b></a>
-          <input class="inputbusqueda" type="text" id="search-input" placeholder="Buscar por nombre">
+          <h3>Directorio de Profecionales Medicos</h3>
+          <div class="search-box">
+            <span class="search-icon"></span>
+            <input class="inputbusqueda" type="text" id="search-input" placeholder="Buscar por nombre...">
+          </div>
         </div>
         <table class="tabla">
           <thead class="tablaHead">
@@ -73,20 +97,46 @@
           </thead>
           <tbody id="product-table-body">
             <tr>
-              <td><div class="doctornombre"><img class="img" src="Source/Doctor1.png" alt="Doctor"><b>Maria</b></div></td>
+              <td>
+                <div class="doctornombre">
+                  <img class="img" src="Source/Doctor1.png" alt="Doctor">
+                  <span>Dr. James Wilson</span>
+                </div>
+              </td>
               <td class="especialidad">Cardiologa</td>
-              <td><div class="estado">&#9679Activo</div></td>
+              <td><span class="estado">&#9679Activo</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="doctornombre">
+                  <img class="img" src="Source/Doctor1.png" alt="Doctor">
+                  <span>Dr. Elena Rodriguez</span>
+                </div>
+              </td>
+              <td class="especialidad">Neurología</td>
+              <td><span class="estado">&#9679Activo</span></td>
+              <td></td>
+            </tr>
+             <tr>
+              <td>
+                <div class="doctornombre">
+                  <img class="img" src="Source/Doctor1.png" alt="Doctor">
+                  <span>Dr. Robert Chen</span>
+                </div>
+              </td>
+              <td class="especialidad">Pediatría</td>
+              <td><span class="estado1">● De Licencia</span></td>
               <td></td>
             </tr>
           </tbody>
         </table>
+  
         <footer class="tableFooter">
-          <div>
-            <span id="page-info">Mostrando 1 a 1 de 1 resultados</span>
-          </div>
-          <div>
-            <button id="prev-page">Anterior</button>
-            <button id="next-page">Siguiente</button>
+          <span id="page-info">Mostrando 1 a 3 de 124 resultados</span>
+          <div class="paginatioin-buttons">
+            <button id="prev-page">&lt;</button>
+            <button id="next-page">&gt;</button>
           </div>
         </footer>
       </div>
